@@ -26,21 +26,12 @@ export default function Logo({ href = "/", className }: LogoProps) {
       >
         <div className="flex flex-col items-center whitespace-pre">
           <p
-            className="text-2xl leading-[110%] text-center text-[rgb(255,89,0)]"
-            style={{
-              fontFamily: 'var(--font-libre-baskerville), "Libre Baskerville", serif',
-            }}
-          >
-            Artemis{" "}
-            <span className="italic">&</span>
-          </p>
-          <p
             className="text-2xl leading-[110%] text-center italic text-[rgb(255,89,0)]"
             style={{
               fontFamily: 'var(--font-libre-baskerville), "Libre Baskerville", serif',
             }}
           >
-            {"   Artemis"}
+            kssaiteja
           </p>
         </div>
       </Link>

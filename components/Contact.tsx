@@ -15,33 +15,20 @@ interface ContactItem {
 const contactItems: ContactItem[] = [
   {
     label: "Email",
-    linkName: "hello@artemis.com",
-    linkUrl: "mailto:hello@artemis.com",
+    linkName: "saitej4865@gmail.com",
+    linkUrl: "mailto:saitej4865@gmail.com",
     variant: "contact",
   },
   {
     label: "LinkedIn",
-    linkName: "linkedin.com/artemis",
-    linkUrl: "linkedin.com/",
+    linkName: "linkedin.com/in/kssaiteja",
+    linkUrl: "https://linkedin.com/in/kssaiteja",
     variant: "contact",
   },
   {
-    label: "Website",
-    linkName: "artemis1.framer.website",
-    linkUrl: "artemis1.framer.website",
-    variant: "contact",
-  },
-  {
-    label: "ARE.NA",
-    linkName: "are.na/artemis",
-    linkUrl: "are.na/",
-    variant: "contact",
-  },
-  {
-    label: "Download this template",
-    linkName: "",
-    linkUrl:
-      "https://framer.link/CwLLucQ?utm_source=product-demo&utm_medium=button&utm_campaign=contact-section",
+    label: "Download Resume",
+    linkName: "Download PDF",
+    linkUrl: "/Satya Sai Teja Kalepu - Resume.pdf",
     variant: "download",
   },
 ];

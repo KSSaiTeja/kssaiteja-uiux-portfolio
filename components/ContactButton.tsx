@@ -37,16 +37,24 @@ export default function ContactButton({
     return "rgb(42, 49, 50)";
   };
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (linkUrl === "javascript:void(0)") {
+      e.preventDefault();
+    }
+  };
+
   return (
     <Link
       href={linkUrl}
-      className={`contact-button flex flex-row items-center justify-start cursor-pointer h-[65px] px-6 py-5 rounded-2xl no-underline relative overflow-visible ${className || ""}`}
+      onClick={handleClick}
+      className={`contact-button flex flex-row items-center cursor-pointer h-[65px] px-6 py-5 rounded-2xl no-underline relative overflow-visible ${className || ""}`}
       style={{
         backgroundColor: getBackgroundColor(),
         transition: "background-color 0.4s ease",
         width: "100%",
         maxWidth: "500px",
         gap: "40px",
+        justifyContent: isDownload ? "space-between" : "flex-start",
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -57,7 +65,7 @@ export default function ContactButton({
       <motion.div
         className="flex-none relative"
         style={{
-          maxWidth: isDownload ? "100%" : "50%",
+          maxWidth: isDownload ? "none" : "50%",
           width: "auto",
         }}
         animate={{
@@ -171,7 +179,7 @@ export default function ContactButton({
           {/* Default download-cloud icon (grey) - shown when not hovered/pressed */}
           {!isHovered && !isPressed && (
             <motion.div
-              className="flex-none relative"
+              className="flex-none relative ml-auto"
               style={{
                 width: "24px",
                 height: "24px",
@@ -195,7 +203,7 @@ export default function ContactButton({
           {/* Hover download-cloud-light icon (off-white) */}
           {isHovered && !isPressed && (
             <motion.div
-              className="flex-none relative"
+              className="flex-none relative ml-auto"
               style={{
                 width: "24px",
                 height: "23px",
@@ -224,7 +232,7 @@ export default function ContactButton({
           {/* Pressed download-cloud-light icon (off-white) */}
           {isPressed && (
             <motion.div
-              className="flex-none relative"
+              className="flex-none relative ml-auto"
               style={{
                 width: "24px",
                 height: "23px",

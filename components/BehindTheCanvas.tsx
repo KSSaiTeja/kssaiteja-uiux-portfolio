@@ -39,7 +39,7 @@ interface GalleryImage {
 const galleryImages: GalleryImage[] = [
   {
     src: "https://framerusercontent.com/images/peS3xlMBI5nrAInAViMhLPV75E.jpg?width=1800&height=1423",
-    caption: "A cat person",
+    caption: "Design enthusiast",
     width: 189,
     height: 242,
     rotate: -3,
@@ -63,7 +63,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     src: "https://framerusercontent.com/images/GTwC3pibWEsTjab4hIEkLaVFfQ.jpg?width=1800&height=1552",
-    caption: "Enjoy hiking",
+    caption: "Always learning",
     width: 189,
     height: 242,
     rotate: 4,
@@ -331,7 +331,7 @@ export default function BehindTheCanvas() {
               fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
             }}
           >
-            Finally, meet the designer passionate about helping startups succeed
+            Finally, meet the designer passionate about crafting intuitive digital products
             – a quick peek into my world
           </p>
         </div>
@@ -345,19 +345,19 @@ export default function BehindTheCanvas() {
             letterSpacing: "-0.1px",
           }}
         >
-          I help startups turn big ideas into designs that actually work.
-          Whether you need an MVP that converts or a pitch deck that closes
-          funding, I focus on results over pretty pixels.
+          I help fintech and enterprise platforms translate complex business requirements
+          into clean, accessible interfaces that drive measurable outcomes. Whether you need
+          a design system that scales or interfaces that convert, I focus on results over pretty pixels.
           <br />
-          When I'm not designing, you'll find me stargazing or hunting for the
-          perfect coffee. I believe great design should solve real problems
-          fast—no endless revisions, no designer ego, just stuff that works.
+          When I'm not designing, you'll find me exploring new tools or diving into motion design.
+          I believe great design should solve real problems fast—no endless revisions, no designer ego,
+          just stuff that works.
         </p>
 
         {/* CTA Button */}
         <CTAButton
-          href="https://framer.link/CwLLucQ?utm_source=product-demo&utm_medium=button&utm_campaign=btc-section"
-          label="Remix for Free!"
+          href="#contact"
+          label="Let's connect"
           showIcon={false}
         />
       </motion.div>

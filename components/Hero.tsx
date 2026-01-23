@@ -30,8 +30,8 @@ export default function Hero() {
         {/* CTA Button */}
         <div className="flex-none w-auto max-md:order-1">
           <CTAButton
-            href="https://framer.link/CwLLucQ?utm_source=product-demo&utm_medium=button&utm_campaign=hero-button"
-            label="Get Started"
+            href="#contact"
+            label="Let's connect"
             showIcon={true}
           />
         </div>
