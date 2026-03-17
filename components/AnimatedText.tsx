@@ -29,7 +29,7 @@ export default function AnimatedText({
             fontSize: "16px",
             fontWeight: 400,
             letterSpacing: "normal",
-            color: "rgb(42, 49, 50)",
+            color: "var(--foreground, #233245)",
           }}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

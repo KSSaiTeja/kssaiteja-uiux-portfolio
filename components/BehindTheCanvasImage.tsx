@@ -65,7 +65,7 @@ export default function BehindTheCanvasImage({
         <div
           className="absolute left-1/2 top-0 rounded-[40px]"
           style={{
-            backgroundColor: "rgb(42, 49, 50)",
+            backgroundColor: "#1a2d3a",
             transform: "translateX(-50%)",
             padding: "4px",
             width: "99px",
@@ -94,7 +94,7 @@ export default function BehindTheCanvasImage({
         <div
           className="absolute rounded-full"
           style={{
-            backgroundColor: "rgb(255, 89, 0)",
+            backgroundColor: "#006793",
             width: "16px",
             height: "16px",
             left: "45px",

@@ -211,7 +211,7 @@ export default function ProjectDetails({
             style={{
               letterSpacing: "-2px",
               lineHeight: "1.2em",
-              color: "rgb(42, 49, 50)",
+              color: "var(--foreground, #233245)",
               fontFamily: 'var(--font-libre-baskerville), "Libre Baskerville", serif',
             }}
           >
@@ -227,7 +227,7 @@ export default function ProjectDetails({
             style={{
               letterSpacing: "-0.2px",
               lineHeight: "1.3em",
-              color: "rgb(118, 125, 126)",
+              color: "var(--color-muted, #5a6b73)",
               fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
             }}
           >
@@ -246,15 +246,15 @@ export default function ProjectDetails({
             <p
               className="font-dm-sans text-base font-medium leading-[1.5em] whitespace-pre"
               style={{
-                color: "rgb(248, 246, 243)",
+                color: "#FAFCFD",
                 fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
               }}
             >
               <mark
                 className="px-[14px] py-[5px] rounded-[20px]"
                 style={{
-                  backgroundColor: "rgb(42, 49, 50)",
-                  color: "rgb(248, 246, 243)",
+                  backgroundColor: "var(--color-primary, #006793)",
+                  color: "#FAFCFD",
                   padding: "5px 14px 6px 14px",
                   borderRadius: "20px",
                 }}
@@ -300,7 +300,7 @@ export default function ProjectDetails({
                 fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
                 fontSize: "16px",
                 lineHeight: "1.3em",
-                color: "rgb(42, 49, 50)",
+                color: "var(--foreground, #233245)",
                 letterSpacing: "-0.1px",
               }}
             />
@@ -310,7 +310,7 @@ export default function ProjectDetails({
                 fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
                 fontSize: "16px",
                 lineHeight: "1.3em",
-                color: "rgb(42, 49, 50)",
+                color: "var(--foreground, #233245)",
                 letterSpacing: "-0.1px",
               }}
             >

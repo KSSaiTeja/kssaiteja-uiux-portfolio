@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8f6f3;
-  --foreground: #171717;
-  /* Custom color tokens from Framer */
-  --color-orange: rgb(255, 89, 0);
-  --color-grey: rgb(118, 125, 126);
-  --color-dark-charcoal: rgb(42, 49, 50);
+  --background: #FAFCFD;
+  --foreground: #233245;
+  /* Blue & white theme */
+  --color-primary: #006793;
+  --color-muted: #5a6b73;
+  --color-dark-charcoal: #233245;
 }
 
 @theme inline {
@@ -17,20 +17,31 @@
   --font-libre-baskerville: var(--font-libre-baskerville);
   --font-dm-sans: var(--font-dm-sans);
   --font-inter: var(--font-inter);
+  --font-patrick-hand: var(--font-patrick-hand);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Keep light background even in dark mode */
-    --background: #f8f6f3;
-    --foreground: #171717;
+    --background: #FAFCFD;
+    --foreground: #233245;
   }
 }
 
 body {
-  background: #f8f6f3;
+  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Respect reduced motion: no laggy scroll/entrance animations (Saptarshi feedback + a11y) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 @keyframes scrollGallery {

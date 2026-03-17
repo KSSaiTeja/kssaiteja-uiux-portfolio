@@ -33,7 +33,7 @@ export default function NavLink({ href, children, className }: NavLinkProps) {
           style={{
             fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
             letterSpacing: "-0.1px",
-            color: isHovered ? "rgb(255, 89, 0)" : "rgb(118, 125, 126)",
+            color: isHovered ? "#006793" : "var(--color-muted, #5a6b73)",
           }}
         >
           {children}

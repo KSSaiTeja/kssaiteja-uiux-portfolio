@@ -2,76 +2,84 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectDetails from "@/components/ProjectDetails";
 import ProjectNav from "@/components/ProjectNav";
+import SavartCaseStudy from "@/components/SavartCaseStudy";
+import { getNextProject, WORK_SLUGS } from "@/data/works";
 
-// This is a placeholder - replace with your actual data fetching logic
-// For now, it returns default/placeholder data
+const DEFAULT_COVER = {
+  src: "https://framerusercontent.com/images/mw8yD9Znq3Y7eMlEljXwi5g196c.png?scale-down-to=1024&width=2464&height=1856",
+  alt: "Project cover",
+  width: 2464,
+  height: 1856,
+};
+
 async function getProjectData(slug: string) {
-  // TODO: Replace this with actual CMS/data fetching
-  // This could be from a database, CMS API, or static files
-  
-  // Placeholder data - replace with your actual data source
-  const defaultProject = {
-    title: "Project Title",
-    summary: "Project summary goes here. This is a description of the project and what it entails.",
-    category: "Category",
-    coverImage: {
-      src: "https://framerusercontent.com/images/mw8yD9Znq3Y7eMlEljXwi5g196c.png?scale-down-to=1024&width=2464&height=1856",
-      alt: "Project cover",
-      width: 2464,
-      height: 1856,
-    },
-    content: `
-      <p>This is the project content area. You can add rich text content here.</p>
-      <p>Replace this with your actual project content when you upload projects.</p>
-    `,
-    nextProject: {
-      title: "Next Project",
-      slug: "next-project",
-    },
-  };
+  const nextProject = getNextProject(slug);
 
-  // In a real implementation, you would:
-  // 1. Fetch from CMS/database based on slug
-  // 2. Get the next project in sequence (or based on your ordering logic)
-  // 3. Return the project data with nextProject info
-  // 4. Handle 404 if project not found
-  // Example:
-  // const project = await fetchProjectBySlug(slug);
-  // const allProjects = await fetchAllProjects();
-  // const currentIndex = allProjects.findIndex(p => p.slug === slug);
-  // const nextProject = currentIndex < allProjects.length - 1 
-  //   ? allProjects[currentIndex + 1] 
-  //   : null;
-  
-  return defaultProject;
+  if (slug === "savart-investment-platform") {
+    return {
+      caseStudy: true as const,
+      title: "Savart Investment Platform",
+      summary: "Redesigning a SEBI-registered advisory platform for clarity, trust & product-led growth.",
+      category: "Fintech",
+      coverImage: DEFAULT_COVER,
+      content: null,
+      nextProject,
+    };
+  }
+
+  const work = WORK_SLUGS.find((w) => w.slug === slug);
+  if (!work) {
+    return {
+      caseStudy: false as const,
+      title: "Project Title",
+      summary: "Project summary goes here.",
+      category: "Category",
+      coverImage: DEFAULT_COVER,
+      content: `<p>Content for ${slug}.</p>`,
+      nextProject,
+    };
+  }
+
+  return {
+    caseStudy: false as const,
+    title: work.title,
+    summary: "Project summary.",
+    category: "Category",
+    coverImage: DEFAULT_COVER,
+    content: `<p>Content for this project.</p>`,
+    nextProject,
+  };
 }
 
 interface PageProps {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 }
 
 export default async function ProjectPage({ params }: PageProps) {
-  const project = await getProjectData(params.slug);
+  const { slug } = await params;
+  const project = await getProjectData(slug);
 
   return (
-    <div className="flex min-h-screen flex-col items-center bg-[#f8f6f3] font-sans">
+    <div className="flex min-h-screen flex-col items-center bg-[#FAFCFD] font-sans">
       <header className="w-full flex justify-center py-6">
         <Header />
       </header>
       <main className="w-full flex flex-col items-center">
         <div className="w-full flex flex-col items-center pt-20 pb-10">
-          <ProjectDetails
-            title={project.title}
-            summary={project.summary}
-            category={project.category}
-            coverImage={project.coverImage}
-            content={project.content}
-          />
+          {project.caseStudy ? (
+            <SavartCaseStudy />
+          ) : (
+            <ProjectDetails
+              title={project.title}
+              summary={project.summary}
+              category={project.category}
+              coverImage={project.coverImage}
+              content={project.content ?? undefined}
+            />
+          )}
         </div>
         <div className="w-full flex flex-col items-center pb-20">
-          <ProjectNav nextProject={project.nextProject} />
+          <ProjectNav nextProject={project.nextProject ?? undefined} />
         </div>
       </main>
       <footer className="w-full flex justify-center py-8">

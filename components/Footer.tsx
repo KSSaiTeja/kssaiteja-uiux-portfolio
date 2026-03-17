@@ -1,142 +1,86 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect } from "react";
-import Link from "next/link";
-import Logo from "./Logo";
+import { IconMail, IconBrandLinkedin, IconBrandWhatsapp } from "@tabler/icons-react";
+import FooterCarousel from "./FooterCarousel";
+
+const EMAIL = "saitej4865@gmail.com";
+const LINKEDIN_URL = "https://linkedin.com/in/kssaiteja";
+const WHATSAPP_URL = "https://wa.me/919876543210"; // replace with your number
 
 export default function Footer() {
-  useEffect(() => {
-    // Inject responsive styles matching Framer exactly
-    const styleId = "footer-responsive-styles";
-    if (document.getElementById(styleId)) return;
-
-    const style = document.createElement("style");
-    style.id = styleId;
-    style.textContent = `
-      /* Base styles - Desktop */
-      .footer-section {
-        padding: 8px;
-        gap: 0px;
-        height: min-content;
-        width: min-content;
-        overflow: hidden;
-      }
-      .footer-logo-container {
-        width: 136px;
-        height: auto;
-        flex: none;
-        position: relative;
-      }
-      .footer-copyright {
-        gap: 4px;
-        align-self: stretch;
-        align-content: center;
-        align-items: center;
-        display: flex;
-        flex: none;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        height: min-content;
-        justify-content: center;
-        overflow: visible;
-        padding: 0px;
-        position: relative;
-        width: auto;
-      }
-      .footer-copyright-text {
-        flex: none;
-        height: auto;
-        position: relative;
-        white-space: pre;
-        width: auto;
-      }
-      .footer-year {
-        flex: none;
-        height: auto;
-        position: relative;
-        width: auto;
-      }
-      
-      /* Tablet: 810px - 1199px */
-      @media (min-width: 810px) and (max-width: 1199px) {
-        .footer-copyright-text, .footer-year {
-          letter-spacing: 0px !important;
-        }
-      }
-      
-      /* Phone: < 810px */
-      @media (max-width: 809px) {
-        .footer-copyright-text, .footer-year {
-          letter-spacing: 0px !important;
-          line-height: 1.4em !important;
-        }
-      }
-    `;
-    document.head.appendChild(style);
-
-    return () => {
-      const existingStyle = document.getElementById(styleId);
-      if (existingStyle) existingStyle.remove();
-    };
-  }, []);
-
-  // Get current year
   const currentYear = new Date().getFullYear();
 
   return (
     <motion.footer
-      className="footer-section relative mx-auto flex flex-col items-center justify-center overflow-hidden"
+      className="relative w-full max-w-[1048px] mx-auto flex flex-col items-center justify-center overflow-hidden px-6 md:px-10 py-12 md:py-16 bg-background"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{
-        type: "spring",
-        bounce: 0.2,
-        duration: 0.4,
+      transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+      style={{
+        fontFamily: "var(--font-dm-sans), \"DM Sans\", sans-serif",
+        color: "var(--foreground)",
       }}
     >
-      {/* Logo */}
-      <div className="footer-logo-container relative flex justify-center">
-        <Logo href="/" />
+      {/* CTA — same typography as other section titles (Libre Baskerville italic) */}
+      <h2
+        className="text-2xl md:text-3xl font-medium text-center mb-8 italic leading-tight"
+        style={{
+          color: "var(--foreground)",
+          fontFamily: "var(--font-libre-baskerville), \"Libre Baskerville\", serif",
+          letterSpacing: "-0.02em",
+        }}
+      >
+        Let&apos;s build incredible things together!
+      </h2>
+
+      {/* Contact row: Email, LinkedIn, WhatsApp — theme primary */}
+      <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
+        <a
+          href={`mailto:${EMAIL}`}
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-white transition-opacity hover:opacity-90"
+          style={{ backgroundColor: "var(--color-primary)" }}
+        >
+          <IconMail size={20} stroke={2} />
+          <span className="font-medium" style={{ fontFamily: "var(--font-dm-sans), \"DM Sans\", sans-serif" }}>{EMAIL}</span>
+        </a>
+        <a
+          href={LINKEDIN_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center w-10 h-10 rounded-lg text-white transition-opacity hover:opacity-90"
+          style={{ backgroundColor: "var(--color-primary)" }}
+          aria-label="LinkedIn"
+        >
+          <IconBrandLinkedin size={22} stroke={2} />
+        </a>
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center w-10 h-10 rounded-lg text-white transition-opacity hover:opacity-90 bg-[#25D366]"
+          aria-label="WhatsApp"
+        >
+          <IconBrandWhatsapp size={22} stroke={2} />
+        </a>
       </div>
 
-      {/* Copyright */}
-      <motion.div
-        className="footer-copyright flex flex-row items-center justify-center gap-1 w-auto"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.1, duration: 0.6 }}
-      >
-        {/* Copyright Symbol */}
-        <p
-          className="footer-copyright-text font-dm-sans text-base leading-[1.3em]"
-          style={{
-            color: "rgb(95, 101, 102)",
-            fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
-            fontSize: "16px",
-            fontWeight: 400,
-            letterSpacing: "-0.1px",
-            lineHeight: "1.3em",
-          }}
-        >
-          ©
-        </p>
+      {/* Sneak peek carousel — same as upper section */}
+      <div className="w-full mb-12">
+        <FooterCarousel />
+      </div>
 
-        {/* Current Year */}
-        <p
-          className="footer-year font-dm-sans text-base leading-[1.3em]"
-          style={{
-            color: "rgb(95, 101, 102)",
-            fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
-            fontSize: "16px",
-            fontWeight: 400,
-            letterSpacing: "0px",
-            lineHeight: "1.3em",
-          }}
-        >
-          {currentYear}
-        </p>
-      </motion.div>
+      {/* Copyright: two lines — muted theme color, DM Sans */}
+      <div
+        className="text-center text-sm leading-relaxed"
+        style={{
+          color: "var(--color-muted)",
+          fontFamily: "var(--font-dm-sans), \"DM Sans\", sans-serif",
+        }}
+      >
+        <p>© K S Sai Teja, {currentYear}.</p>
+        <p>Built with ❤️ & Next.js</p>
+      </div>
     </motion.footer>
   );
 }

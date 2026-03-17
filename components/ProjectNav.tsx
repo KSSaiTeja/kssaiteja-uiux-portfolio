@@ -35,12 +35,12 @@ export default function ProjectNav({ nextProject }: ProjectNavProps) {
           font-weight: 500 !important;
         }
         .project-nav-link-inner {
-          color: rgb(255, 89, 0) !important;
+          color: #006793 !important;
           text-decoration: none !important;
           transition: color 0.3s ease, text-decoration 0.3s ease !important;
         }
         .project-nav-link-inner:hover {
-          color: rgb(42, 49, 50) !important;
+          color: #233245 !important;
           text-decoration: underline !important;
         }
       }
@@ -63,12 +63,12 @@ export default function ProjectNav({ nextProject }: ProjectNavProps) {
           font-weight: 500 !important;
         }
         .project-nav-link-inner {
-          color: rgb(255, 89, 0) !important;
+          color: #006793 !important;
           text-decoration: none !important;
           transition: color 0.3s ease, text-decoration 0.3s ease !important;
         }
         .project-nav-link-inner:hover {
-          color: rgb(42, 49, 50) !important;
+          color: #233245 !important;
           text-decoration: underline !important;
         }
       }
@@ -91,12 +91,12 @@ export default function ProjectNav({ nextProject }: ProjectNavProps) {
           font-weight: 500 !important;
         }
         .project-nav-link-inner {
-          color: rgb(255, 89, 0) !important;
+          color: #006793 !important;
           text-decoration: none !important;
           transition: color 0.3s ease, text-decoration 0.3s ease !important;
         }
         .project-nav-link-inner:hover {
-          color: rgb(42, 49, 50) !important;
+          color: #233245 !important;
           text-decoration: underline !important;
         }
         .project-nav-next {
@@ -129,7 +129,7 @@ export default function ProjectNav({ nextProject }: ProjectNavProps) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           style={{
-            color: "rgb(255, 89, 0)",
+            color: "#006793",
             fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
             margin: 0,
             padding: 0,
@@ -151,7 +151,7 @@ export default function ProjectNav({ nextProject }: ProjectNavProps) {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         style={{
-          color: "rgb(255, 89, 0)",
+          color: "#006793",
           fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
           margin: 0,
           padding: 0,

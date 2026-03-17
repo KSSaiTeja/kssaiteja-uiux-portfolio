@@ -12,7 +12,7 @@ export default function HeroTitle({ className }: HeroTitleProps) {
       className={`text-center italic text-[80px] max-xl:text-[64px] max-md:text-[42px] max-xl:tracking-[-2px] max-md:tracking-[-1px] ${className || ""}`}
       style={{
         fontFamily: 'var(--font-libre-baskerville), "Libre Baskerville", serif',
-        color: "rgb(0, 22, 102)",
+        color: "var(--color-primary, #006793)",
         fontWeight: 400,
         lineHeight: "1.2em",
       }}
@@ -25,7 +25,7 @@ export default function HeroTitle({ className }: HeroTitleProps) {
         bounce: 0,
       }}
     >
-      Product & Visual Designer
+      Senior UI/UX Designer
     </motion.h1>
   );
 }

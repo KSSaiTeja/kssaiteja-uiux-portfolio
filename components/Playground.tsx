@@ -367,7 +367,7 @@ export default function Playground() {
             style={{
               letterSpacing: "-2px",
               lineHeight: "1.2em",
-              color: "rgb(0, 22, 102)",
+              color: "var(--color-primary, #006793)",
               fontFamily: 'var(--font-libre-baskerville), "Libre Baskerville", serif',
             }}
           >
@@ -381,7 +381,7 @@ export default function Playground() {
             style={{
               letterSpacing: "-0.2px",
               lineHeight: "1.3em",
-              color: "rgb(42, 49, 50)",
+              color: "var(--foreground, #233245)",
               fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
             }}
           >
@@ -455,7 +455,7 @@ export default function Playground() {
           style={{
             letterSpacing: "-0.04em",
             lineHeight: "1.4em",
-            color: "rgb(0, 22, 102)",
+            color: "var(--color-primary, #006793)",
             fontFamily: 'var(--font-libre-baskerville), "Libre Baskerville", serif',
           }}
         >

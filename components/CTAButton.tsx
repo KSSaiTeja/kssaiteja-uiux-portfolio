@@ -39,10 +39,10 @@ export default function CTAButton({
         className="flex flex-row items-center justify-center gap-2 cursor-pointer h-12 px-6 rounded-full no-underline relative"
         style={{
           backgroundColor: isPressed
-            ? "rgb(42, 49, 50)"
+            ? "#004d6b"
             : isHovered
-            ? "rgb(95, 101, 102)"
-            : "rgb(255, 89, 0)",
+            ? "#004d6b"
+            : "#006793",
           transition: "background-color 0.4s ease",
         }}
         onMouseEnter={() => setIsHovered(true)}
@@ -59,7 +59,7 @@ export default function CTAButton({
             fontWeight: 500,
             letterSpacing: "0px",
             lineHeight: "1.5em",
-            color: "rgb(248, 246, 243)",
+            color: "#FAFCFD",
             opacity: isPressed ? 0.7 : 1,
           }}
           whileTap={{ scale: 0.98 }}
@@ -78,14 +78,14 @@ export default function CTAButton({
           >
             <path
               d="M 11.458 2.083 L 0 13.541"
-              stroke="rgb(248, 246, 243)"
+              stroke="#FAFCFD"
               strokeWidth="2.08"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M 20.833 2.083 L 13.542 22.916 L 9.375 13.541 L 0 9.375 Z"
-              stroke="rgb(248, 246, 243)"
+              stroke="#FAFCFD"
               strokeWidth="2.08"
               strokeLinecap="round"
               strokeLinejoin="round"

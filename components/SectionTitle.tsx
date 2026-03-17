@@ -28,7 +28,7 @@ export default function SectionTitle({
           fontStyle: "italic",
           letterSpacing: "-0.04em",
           lineHeight: "1.4em",
-          color: "rgb(0, 22, 102)",
+          color: "var(--color-primary, #006793)",
         }}
       >
         {title}

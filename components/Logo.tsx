@@ -26,7 +26,7 @@ export default function Logo({ href = "/", className }: LogoProps) {
       >
         <div className="flex flex-col items-center whitespace-pre">
           <p
-            className="text-2xl leading-[110%] text-center italic text-[rgb(255,89,0)]"
+            className="text-2xl leading-[110%] text-center italic text-[#006793]"
             style={{
               fontFamily: 'var(--font-libre-baskerville), "Libre Baskerville", serif',
             }}

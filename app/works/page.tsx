@@ -5,7 +5,7 @@ import Contact from "@/components/Contact";
 
 export default function WorksPage() {
   return (
-    <div className="flex min-h-screen flex-col items-center bg-[#f8f6f3] font-sans">
+    <div className="flex min-h-screen flex-col items-center bg-[#FAFCFD] font-sans">
       <header className="w-full flex justify-center py-6">
         <Header />
       </header>

@@ -155,7 +155,7 @@ export default function Contact() {
         <p
           className="contact-headline font-dm-sans text-[20px] leading-[1.3em] text-center max-w-full max-xl:text-base max-xl:leading-[1.3em] max-md:text-base max-md:leading-[1.2em]"
           style={{
-            color: "rgb(118, 125, 126)",
+            color: "var(--color-muted, #5a6b73)",
             fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
             letterSpacing: "-0.2px",
           }}

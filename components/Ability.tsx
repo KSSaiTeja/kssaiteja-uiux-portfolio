@@ -371,7 +371,7 @@ export default function Ability() {
           <h2
             className="font-libre-baskerville italic text-center text-[64px] leading-[1.2em] tracking-[-2px] max-xl:text-[40px] max-md:text-[32px] mt-0"
             style={{
-              color: "rgb(0, 22, 102)",
+              color: "var(--color-primary, #006793)",
               fontFamily: 'var(--font-libre-baskerville), "Libre Baskerville", serif',
             }}
           >
@@ -383,7 +383,7 @@ export default function Ability() {
         <p
           className="font-dm-sans text-[20px] leading-[1.3em] text-center max-w-full max-xl:text-base max-xl:leading-[1.3em] max-md:text-base max-md:leading-[1.2em]"
           style={{
-            color: "rgb(42, 49, 50)",
+            color: "var(--foreground, #233245)",
             fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
           }}
         >

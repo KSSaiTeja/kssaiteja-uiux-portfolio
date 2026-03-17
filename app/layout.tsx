@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Libre_Baskerville, DM_Sans, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Libre_Baskerville, DM_Sans, Inter, Patrick_Hand } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,6 +32,12 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const patrickHand = Patrick_Hand({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-patrick-hand",
+});
+
 export const metadata: Metadata = {
   title: "K S Sai Teja | Senior UI/UX Designer",
   description: "UI/UX Designer with 2+ years of experience crafting intuitive digital products for fintech and enterprise platforms. Expert in translating complex business requirements into clean, accessible interfaces.",
@@ -58,7 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${libreBaskerville.variable} ${dmSans.variable} ${inter.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${libreBaskerville.variable} ${dmSans.variable} ${inter.variable} ${patrickHand.variable} antialiased`}
       >
         {children}
       </body>

@@ -278,7 +278,7 @@ export default function BehindTheCanvas() {
     <section
       className="btc-section relative mx-auto flex flex-col items-center justify-center rounded-[32px] max-md:rounded-[20px]"
       style={{
-        backgroundColor: "rgb(42, 49, 50)",
+        backgroundColor: "#1a2d3a",
       }}
     >
       {/* Background Pattern */}

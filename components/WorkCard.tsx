@@ -51,7 +51,7 @@ export default function WorkCard({
 
   return (
     <motion.div
-      className="group cursor-pointer relative w-full h-full max-w-[504px] min-w-[240px] rounded-2xl overflow-hidden bg-[rgb(235,233,228)] border border-[rgb(235,233,228)] p-5 max-xl:max-w-[500px] max-xl:p-4 max-md:w-full max-md:p-4 flex flex-col shadow-sm hover:shadow-lg transition-shadow duration-300"
+      className="group cursor-pointer relative w-full h-full max-w-[504px] min-w-[240px] rounded-2xl overflow-hidden bg-[#e8eef4] border border-[#dce4ec] p-5 max-xl:max-w-[500px] max-xl:p-4 max-md:w-full max-md:p-4 flex flex-col shadow-sm hover:shadow-lg transition-shadow duration-300"
       initial={{ opacity: 0, y: 80 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -120,7 +120,7 @@ export default function WorkCard({
             <h5
               className="w-full text-left font-dm-sans font-medium text-[36px] leading-[1.3em] tracking-[-0.02em] max-xl:text-[36px] max-md:text-[24px] max-md:leading-[1em]"
               style={{
-                color: "rgb(42, 49, 50)",
+                color: "var(--foreground, #233245)",
                 fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
               }}
             >
@@ -131,7 +131,7 @@ export default function WorkCard({
             <p
               className="w-full text-left font-dm-sans text-base leading-[1.3em] tracking-[-0.1px] line-clamp-4 max-xl:leading-[1.3em] max-md:leading-[1.4em] flex-grow"
               style={{
-                color: "rgb(118, 125, 126)",
+                color: "var(--color-muted, #5a6b73)",
                 fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
                 minHeight: "5.2em",
               }}
@@ -147,15 +147,15 @@ export default function WorkCard({
               <p
                 className="font-dm-sans text-base font-medium leading-[1.5em] whitespace-pre"
                 style={{
-                  color: "rgb(248, 246, 243)",
+                  color: "#FAFCFD",
                   fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
                 }}
               >
                 <mark
                   className="px-[14px] py-[5px] rounded-[20px]"
                   style={{
-                    backgroundColor: "rgb(42, 49, 50)",
-                    color: "rgb(248, 246, 243)",
+                    backgroundColor: "var(--color-primary, #006793)",
+                    color: "#FAFCFD",
                     padding: "5px 14px 6px 14px",
                     borderRadius: "20px",
                   }}
@@ -191,7 +191,7 @@ export default function WorkCard({
                 duration: 0.4,
               }}
               style={{
-                backgroundColor: "rgb(42, 49, 50)",
+                backgroundColor: "var(--color-primary, #006793)",
               }}
             >
               <svg
@@ -202,12 +202,12 @@ export default function WorkCard({
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-6 h-6"
                 style={{
-                  color: "rgb(248, 246, 243)",
+                  color: "#FAFCFD",
                 }}
               >
                 <path
                   d="M 0 0 L 14 0"
-                  stroke="rgb(248, 246, 243)"
+                  stroke="#FAFCFD"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -215,7 +215,7 @@ export default function WorkCard({
                 />
                 <path
                   d="M 0 0 L 7 7 L 0 14"
-                  stroke="rgb(248, 246, 243)"
+                  stroke="#FAFCFD"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"

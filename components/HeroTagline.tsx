@@ -12,7 +12,7 @@ export default function HeroTagline({ className }: HeroTaglineProps) {
       className={`text-center text-[20px] max-xl:text-[16px] max-md:text-[16px] max-xl:leading-[1.3em] max-md:leading-[1.2em] ${className}`}
       style={{
         fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
-        color: "rgb(42, 49, 50)",
+        color: "var(--foreground, #233245)",
         fontWeight: 400,
         letterSpacing: "-0.2px",
       }}
@@ -25,7 +25,7 @@ export default function HeroTagline({ className }: HeroTaglineProps) {
         bounce: 0,
       }}
     >
-      startups can count on!
+      Fintech & product systems that ship.
     </motion.p>
   );
 }
